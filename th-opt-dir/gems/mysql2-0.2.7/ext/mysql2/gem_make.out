@@ -1,0 +1,33 @@
+C:/Ruby/bin/ruby.exe extconf.rb
+checking for rb_thread_blocking_region()... *** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of
+necessary libraries and/or headers.  Check the mkmf.log file for more
+details.  You may need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=C:/Ruby/bin/ruby
+C:/Ruby/lib/ruby/1.9.1/mkmf.rb:368:in `try_do': The complier failed to generate an executable file. (RuntimeError)
+You have to install development tools first.
+	from C:/Ruby/lib/ruby/1.9.1/mkmf.rb:435:in `try_link0'
+	from C:/Ruby/lib/ruby/1.9.1/mkmf.rb:440:in `try_link'
+	from C:/Ruby/lib/ruby/1.9.1/mkmf.rb:552:in `try_func'
+	from C:/Ruby/lib/ruby/1.9.1/mkmf.rb:797:in `block in have_func'
+	from C:/Ruby/lib/ruby/1.9.1/mkmf.rb:693:in `block in checking_for'
+	from C:/Ruby/lib/ruby/1.9.1/mkmf.rb:280:in `block (2 levels) in postpone'
+	from C:/Ruby/lib/ruby/1.9.1/mkmf.rb:254:in `open'
+	from C:/Ruby/lib/ruby/1.9.1/mkmf.rb:280:in `block in postpone'
+	from C:/Ruby/lib/ruby/1.9.1/mkmf.rb:254:in `open'
+	from C:/Ruby/lib/ruby/1.9.1/mkmf.rb:276:in `postpone'
+	from C:/Ruby/lib/ruby/1.9.1/mkmf.rb:692:in `checking_for'
+	from C:/Ruby/lib/ruby/1.9.1/mkmf.rb:796:in `have_func'
+	from extconf.rb:9:in `<main>'

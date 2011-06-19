@@ -5,4 +5,4 @@ require File.expand_path('../config/application', __FILE__)
 #require 'rake/dsl_definition'
 require 'rake'
 
-SampleApp::Application.load_tasks
+Googlemaps::Application.load_tasks
