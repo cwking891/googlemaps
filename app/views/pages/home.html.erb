@@ -29,62 +29,10 @@
             
 		<%= link_to image_tag("plus25.png", :alt => "Contacts", :width =>18, :border => 0), contacts_path %> Manage People!
     </div>
-<%
-=begin%>   	   	   
-    $sql = "SELECT * FROM comments"
-	     . " WHERE parent_id = 0"
-	     . " ORDER BY date_entered DESC";
-	$result = sql($sql, $return);
-<%
-=end%>
 
     <div id="comments" class="round center">
         <hr />
     </div>
   
 </div>
-
-
-<%
-=begin%>
-
-# put this in the app/views/layouts/posts_layout.html.erb
-<html>
-  <head>
-    <title><%= yield(:page_title) || "My awesome site"%></title>
-  </head>
-  <body><%= yield %> </body>
-</html>
-
-# put this in the app/views/posts/index.html.erb
-<%= content_for :page_title, "post listing" %>
-<h1>Here are your posts...</h1>
-
-<% if signed_in? %>
-  <table class="front" summary="For signed-in users">
-    <tr>
-      <td class="main">
-        <h1 class="micropost">Post Here</h1>
-        <%= render 'shared/micropost_form' %>
-        <%= render 'shared/feed' %>
-     </td>
-      <td class="sidebar round">
-        <%= render 'shared/user_info' %>
-      </td>
-    </tr>
-  </table>
-<% else %>
-  <h1>Sample App</h1>
-
-  <p>
-    This is the home page for the
-    <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-    sample application.
-  </p>
-
-  <%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
-
-  <% end %>
-<%
-=end%>
 
