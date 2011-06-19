@@ -1,0 +1,38 @@
+(in C:/Documents and Settings/Main/My Documents/Study/Foothill/COIN67_Ruby/rails_projects/googlemaps)
+
+# These are requests received from a particular url. Since they are RESTful routes,
+# The controller is determined from the major portion of the url which is a resource
+# name.  The resource itself is the secondary part of the url, and the action is 
+# the third part of the url.
+      users GET    /users(.:format)          {:action=>"index", :controller=>"users"}
+            POST   /users(.:format)          {:action=>"create", :controller=>"users"}
+   new_user GET    /users/new(.:format)      {:action=>"new", :controller=>"users"}
+  edit_user GET    /users/:id/edit(.:format) {:action=>"edit", :controller=>"users"}
+       user GET    /users/:id(.:format)      {:action=>"show", :controller=>"users"}
+            PUT    /users/:id(.:format)      {:action=>"update", :controller=>"users"}
+            DELETE /users/:id(.:format)      {:action=>"destroy", :controller=>"users"}
+
+   sessions POST   /sessions(.:format)       {:action=>"create", :controller=>"sessions"}
+new_session GET    /sessions/new(.:format)   {:action=>"new", :controller=>"sessions"}
+    session DELETE /sessions/:id(.:format)   {:action=>"destroy", :controller=>"sessions"}
+
+edit_contact GET   /contacts/:id/edit(.:format) {:action=>"edit", :controller=>"contacts"}
+   contacts POST   /contacts(.:format)       {:action=>"create", :controller=>"contacts"}
+    contact DELETE /contacts/:id(.:format)  {:action=>"destroy", :controller=>"contacts"}
+
+#microposts POST   /microposts(.:format)     {:action=>"create", :controller=>"microposts"}
+# micropost DELETE /microposts/:id(.:format) {:action=>"destroy", :controller=>"microposts"}
+
+
+# These are links that are clicked inside any page.  The link is sent to the specified
+# controller and invokes the specified action (method) there.
+       home        /home(.:format)           {:controller=>"pages", :action=>"home"}
+    contact        /contact(.:format)        {:controller=>"pages", :action=>"contact"}
+       help        /help(.:format)           {:controller=>"pages", :action=>"help"}
+      about        /about(.:format)          {:controller=>"pages", :action=>"about"}
+       root        /(.:format)               {:controller=>"pages", :action=>"home"}
+
+     signup        /signup(.:format)         {:controller=>"users", :action=>"new"}
+
+     signin        /signin(.:format)         {:controller=>"sessions", :action=>"new"}
+    signout        /signout(.:format)        {:controller=>"sessions", :action=>"destroy"}

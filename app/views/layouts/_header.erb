@@ -1,0 +1,28 @@
+  <div id="header" class="mainpanel center round">
+ 
+  <% if signed_in? %>
+    <ul id="nav_header">
+      <li><%="Welcome #{current_user.name}"%></li>
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Contacts", contacts_path %></li>
+      <li><%= link_to "Profile", edit_user_path(current_user) %></li>
+      <li><%= link_to "Sign Out", signout_path, :method => :delete %></li>
+    </ul>
+    <% else %>
+    <ul id="nav_header">
+      <li><%= link_to "Home", root_path %></li>
+  	<li><%= link_to "New User", signup_path %></li>
+      <li><%= link_to "Sign In", signin_path %></li>
+    </ul>
+    <% end %>
+
+    <h1>Awesome Maps</h1>
+    <p>
+	- Powered by 
+	<a href="http://code.google.com/apis/maps/documentation/javascript/">
+	  Google Maps API
+	</a>
+    </p>
+
+  </div>
+

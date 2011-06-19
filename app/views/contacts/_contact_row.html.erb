@@ -1,0 +1,11 @@
+  <tr>
+    <td><%= contact_row.name %></td>
+    <td><%= contact_row.full_address %></td>
+    <td><%= contact_row.country %></td>
+    <td>
+        <%= link_to "edit", edit_contact_path(contact_row) %>
+        <%= link_to "delete", contact_row, :method => :delete,
+                                           :confirm => "You sure you want to delete #{contact_row.name}?",
+                                           :title => contact_row.name %>
+    </td>
+  <tr>

@@ -1,0 +1,33 @@
+<%
+=begin%>
+	$query = "SELECT SUM(1), SUM(visits) FROM visitor WHERE page=\"$page\"";
+	$result = sql($query);
+	$row = @mysql_fetch_array($result);
+    @mysql_close();
+    $date = getDate();
+
+<footer>
+  <nav class="round">
+    <ul>
+      <li><%= link_to "About", about_path %></li>
+      <li><%= link_to "Contact", contact_path %></li>
+      <li><a href="http://news.railstutorial.org/">News</a></li>
+      <li><a href="http://www.railstutorial.org/">Rails Tutorial</a></li>
+    </ul>
+  </nav>
+</footer>
+
+<%
+=end%>
+
+<div id="footer" class="center round">
+    <p>&copy; Awesome Maps, Inc. <%=Date.today.year%> &nbsp; California, USA
+    &nbsp;&nbsp;Christopher King</p>
+<%
+#    <p class="smaller">This page has had <?=s($row[0],"visitor")?> and <?=s($row[1],"hit")?>
+#  	since 5/27/2011. Last modified <?= date("l, dS F, Y", filemtime($page)) ?></p>
+%>
+      <%= debug(params) if Rails.env.development? %>
+
+</div>
+

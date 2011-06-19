@@ -1,0 +1,13 @@
+<div class="mainpanel center round">
+
+	<h2>Your Contacts</h2>
+
+	 <table>
+		<%= render :partial => "contacts/contact_row",  :collection => current_user.contacts %>
+	 </table>
+
+	<p>
+	  <%= link_to "Add a new contact to your list", new_contact_path %>
+	</p>
+
+</div>
