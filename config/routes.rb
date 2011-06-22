@@ -1,7 +1,7 @@
 Googlemaps::Application.routes.draw do
   resources :users
   resources :sessions,   :only => [:new, :create, :destroy]
-# resources :microposts, :only => [:create, :destroy]
+  resources :comments,   :only => [:new, :create]
   resources :contacts
 
   match "/home",	 :to => "pages#home"
@@ -25,5 +25,8 @@ Googlemaps::Application.routes.draw do
 # Each of those contacts can be clicked to edit: edit_contact_path(contact)
 # The Contacts page also has the edit_contact_path(contact) link
 # The Contacts page also has the create and destroy actions
+
+# Home page lists all available comments from all users
+# Each comment has a link to new_comment_path
 
 end

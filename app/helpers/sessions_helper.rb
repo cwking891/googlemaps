@@ -24,7 +24,7 @@ module SessionsHelper
 
   def deny_access
     store_location
-    redirect_to signin_path, :notice => "Please sign in to access this page."
+    redirect_to signin_path, :notice => "Please sign in to use Google Maps."
   end
 
   def authenticate

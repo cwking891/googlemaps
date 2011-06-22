@@ -35,6 +35,7 @@ td, th {width:280px; border-style:inset; padding:8px;  }
 
 th, .bold {border-style:none; font-weight: bold;}
 
+.actions > input  {display:block; margin-top:12px; }
 
 #header {
     margin-bottom:10px; 
@@ -48,18 +49,32 @@ th, .bold {border-style:none; font-weight: bold;}
     height:auto;
 }
 
-.mainpanel {
+.mainpanel  {
     width:740px;
     background-image:url('../images/mback2.png');
     padding: 5px 20px 20px 20px;
 }
+
+.flash {
+    width:740px;
+    background-image:url('../images/mback2.png');
+	-moz-border-radius:    10px;
+	-webkit-border-radius: 10px;
+	border-radius:         10px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:8px; 
+	color:#0066CC;
+	padding: 8px 20px;
+}
+
 
 #nav_header {
 	float:right;
 }
 
 #nav_header li {
-	display:inline-block; padding-right:8px;
+	display:inline-block; padding-right:8px; font-size:1.1em; 
 }
 
 #nav_header  a {text-decoration:none; color:#0066CC; font-size:1.1em; }
@@ -171,6 +186,12 @@ margin-left:-20px;
 .com_entry {margin:8px 4px; height:200px; width:585px; }
 
 .error {color: orange; }
+
+.field_with_errors   {display:inline; }
+.field_with_errors > label  {color: orange; }
+
+#error_explanation {color: red; }
+#error_explanation > h2 {color: red; }
 
 #messages {padding-bottom: 8px; }
 

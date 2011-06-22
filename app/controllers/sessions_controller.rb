@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
       render 'new'
     else
       # Sign the user in and redirect to the user's show page.
-      flash[:success] = "Welcome #{user.name}, you are validated."
+      flash[:success] = "Welcome #{user.name}, enjoy Google Maps!"
       sign_in user
       redirect_back_or user
     end

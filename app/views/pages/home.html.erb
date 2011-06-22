@@ -31,7 +31,11 @@
     </div>
 
     <div id="comments" class="round center">
-        <hr />
+      <hr />
+      <% unless @comments.empty? %>
+          <%= render @comments %>
+          <%= will_paginate @comments %>
+      <% end %>
     </div>
   
 </div>

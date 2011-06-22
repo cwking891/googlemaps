@@ -1,0 +1,30 @@
+  <div class="comment round">
+
+    <p class="com_subject"><%=comment.subject %></p>
+    <p class="com_signature">by <%= comment.user.name%> <%= time_ago_in_words(comment.created_at) %> ago.</p>
+    <p class="com_body"><%=comment.body%></p>
+        
+<%
+=begin%>
+    # Here will add replies!
+        $sql = "SELECT * FROM comments"
+             . " WHERE parent_id=%s"
+             . " ORDER BY date_entered DESC";
+        $result2 = sql(sprintf($sql, $comment->get_comment_id()), $return2);
+        while ($row2 = mysql_fetch_array($result2)) {
+        $comment2 = new Comment($row2);
+    ?>
+    <div class="comment_reply round">
+        <p class="com_subject_reply">Re: <?=$comment2->get_subject()?></p>
+        <p class="com_signature">by <?=$comment2->get_signin_id()?> on <?=$comment2->get_date_entered()?></p>
+        <p class="com_body"><?=$comment2->get_body()?></p>
+    </div>
+<%
+=end%>
+
+    <p class="dark_link">
+	    <%# link_to "Post Reply", new_comment_path %>
+	    <%= link_to "Post New Comment", new_comment_path %>
+    </p>
+
+  </div>

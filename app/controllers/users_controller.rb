@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def new
     @user = User.new
     @title = "Sign Up"
-	@onload = "onload = setFocus('user_name')"
+    @onload = "onload = setFocus('user_name')"
   end
 
   def create

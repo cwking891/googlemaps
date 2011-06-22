@@ -3,15 +3,15 @@
   <% if signed_in? %>
     <ul id="nav_header">
       <li><%="Welcome #{current_user.name}"%></li>
-      <li><%= link_to "Home", root_path %></li>
-      <li><%= link_to "Contacts", contacts_path %></li>
-      <li><%= link_to "Profile", edit_user_path(current_user) %></li>
-      <li><%= link_to "Sign Out", signout_path, :method => :delete %></li>
+      <li><%= link_to_unless_current "Home", root_path %></li>
+      <li><%= link_to_unless_current "Contacts", contacts_path %></li>
+      <li><%= link_to_unless_current "Profile", edit_user_path(current_user) %></li>
+      <li><%= link_to_unless_current "Sign Out", signout_path, :method => :delete %></li>
     </ul>
     <% else %>
     <ul id="nav_header">
       <li><%= link_to "Home", root_path %></li>
-  	<li><%= link_to "New User", signup_path %></li>
+  	  <li><%= link_to "New User", signup_path %></li>
       <li><%= link_to "Sign In", signin_path %></li>
     </ul>
     <% end %>

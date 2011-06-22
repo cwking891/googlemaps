@@ -15,6 +15,7 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation
 
   has_many :contacts, :dependent => :destroy
+  has_many :comments #even when user is deleted, any comments remain
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 	
@@ -33,7 +34,6 @@ class User < ActiveRecord::Base
   before_save :encrypt_password
 
   def contact_list
-    # This is preliminary. See Chapter 12 for the full implementation.
     Contact.where("user_id = ?", id)
   end
 
